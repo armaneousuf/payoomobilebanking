@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Payoo Mobile Banking</title>
+    <title>Payoo Mobile Banking || Login page</title>
 </head>
 
 <body class="bg-[#F4F5F7] h-[100vh] flex justify-center items-center">
@@ -19,12 +19,12 @@
                 <div>
                     <label for="mobile" class="font-bold block mb-2">Mobile Number</label>
                     <input type="tel" id="mobile" placeholder="Enter your number"
-                        class="input rounded-xl bg-[#f4f5f7] outline-none" /> <br>
+                        class="input rounded-xl bg-[#f4f5f7] outline-none"/> <br>
                 </div>
                 <div>
                     <label for="password" class="font-bold block mb-2">4 Digit Pin</label>
-                    <input type="password" id="password" placeholder="Enter 4 digit pin"
-                        class="input rounded-xl bg-[#f4f5f7] outline-none" /> <br>
+                    <input type="password" inputmode="numeric" maxlength="4" id="password" placeholder="Enter 4 digit pin" 
+                        class="input rounded-xl bg-[#f4f5f7] outline-none"/> <br>
                     <button
                         class="btn bg-[#3B25C1] text-white text-xl font-thin rounded-3xl mt-10 w-full hover:bg-[#845EC2]"
                         id="login-btn">Login</button>
