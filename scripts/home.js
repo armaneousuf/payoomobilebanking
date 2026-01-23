@@ -8,7 +8,7 @@ document
     const bank = document.querySelector("#bank-select").value;
     const accountNumber = document.querySelector("#bank-num").value;
     const amount = parseFloat(document.querySelector("#add-amount").value);
-    const pin = document.querySelector("#password").value;
+    const pin = parseFloat(document.querySelector("#password").value);
     const totalAmount = parseFloat(
       document.querySelector("#total-amount").innerText,
     );
@@ -21,6 +21,11 @@ document
     if (pin !== pinNumber) {
       alert('Please provide a valid Pin number');
       return;
+    }
+
+    if (isNaN(amount) || amount <= 0){
+  alert('Please enter a valid number');
+  return;
     }
 
     const totalNewBalance = amount + totalAmount;
