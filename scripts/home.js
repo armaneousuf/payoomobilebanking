@@ -9,11 +9,14 @@ document
     const pin = document.querySelector("#password").value;
     const totalAmount = parseFloat(
       document.querySelector("#total-amount").innerText,
-      );
+    );
 
-      const totalNewBalance = amount + totalAmount;
-      
-      document.querySelector('#total-amount').innerText = totalNewBalance;
+    const totalNewBalance = amount + totalAmount;
 
-    
+    document.querySelector("#total-amount").innerText = totalNewBalance;
+
+    // This clears the physical input box on the screen
+    document.querySelector("#add-amount").value = "";
+    document.querySelector("#bank-num").value = "";
+    document.querySelector("#password").value = "";
   });
