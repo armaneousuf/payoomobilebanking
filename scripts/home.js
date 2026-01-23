@@ -1,3 +1,5 @@
+const pinNumber = 1234;
+
 document
   .querySelector("#add-money-btn")
   .addEventListener("click", function (e) {
@@ -11,6 +13,16 @@ document
       document.querySelector("#total-amount").innerText,
     );
 
+    if (accountNumber.length < 11) {
+      alert('Please provide a valid Account number');
+      return;
+    }
+
+    if (pin !== pinNumber) {
+      alert('Please provide a valid Pin number');
+      return;
+    }
+
     const totalNewBalance = amount + totalAmount;
 
     document.querySelector("#total-amount").innerText = totalNewBalance;
@@ -20,3 +32,6 @@ document
     document.querySelector("#bank-num").value = "";
     document.querySelector("#password").value = "";
   });
+
+
+  
