@@ -15,88 +15,123 @@
     <title>Payoo Homepage</title>
 </head>
 
-<body class="bg-[#F4F5F7] h-[100vh] font-[Inter] pt-5">
+<body class="bg-[#F4F5F7] min-h-screen font-[Inter] pt-5">
 
-<main class="max-w-lg mx-auto bg-white p-5 rounded-b-xl">
-    <nav class="min-h-[50px] p-2 mt-2 flex justify-between items-center border-b-2 border-b-[#cec7c780]">
-        <div class="flex justify-between items-center gap-2">
-            <img src="./assets/logo.png" alt="The logo of Payoo Mobile Banking" class="h-8">
-            <div>
-                <p class="text-[18px] font-bold">$ <span>45000</span></p>
-                <p class="text-[14px] text-[#08080880]">Available Balance</p>
+    <main class="max-w-lg mx-auto bg-white p-5 rounded-b-xl">
+        <nav class="min-h-[50px] p-2 mt-2 flex justify-between items-center border-b-2 border-b-[#cec7c780]">
+            <div class="flex justify-between items-center gap-2">
+                <img src="./assets/logo.png" alt="The logo of Payoo Mobile Banking" class="h-8">
+                <div>
+                    <p class="text-[18px] font-bold">$ <span>45000</span></p>
+                    <p class="text-[14px] text-[#08080880]">Available Balance</p>
+                </div>
             </div>
-        </div>
-        <div>
-            <button class="btn bg-white text-[#777676] rounded-xl py-5">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
-                </svg>
+            <div>
+                <button class="btn bg-white text-[#777676] rounded-xl py-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                    </svg>
 
-                Log Out</button>
-        </div>
-    </nav>
+                    Log Out</button>
+            </div>
+        </nav>
 
-    <section class="mt-10">
-        <div>
-            <h1 class="text-[24px] font-semibold">Welcome to Pay<span class="text-[#7460ff]">oo</span></h1>
-            <p class="text-[#808080] mt-3">Enjoy easy and convenient financial services with us. Cashout charge is low
-                and
-            </p>
-        </div>
+        <section class="mt-10">
+            <div>
+                <h1 class="text-[24px] font-semibold">Welcome to Pay<span class="text-[#7460ff]">oo</span></h1>
+                <p class="text-[#808080] mt-3">Enjoy easy and convenient financial services with us. Cashout charge is
+                    low
+                    and
+                </p>
+            </div>
+        </section>
+
+        <!-- Cards section -->
+
+        <section class="mt-12">
+            <div class="parent grid grid-cols-3 gap-3">
+
+                <div
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
+                    <img src="./assets/opt-1.png" alt="">
+                    <h3 class="text-center text-sm">Add Money</h3>
+                </div>
+
+
+                <div
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
+                    <img src="./assets/opt-2.png" alt="">
+                    <h3 class="text-center text-sm">Cashout</h3>
+                </div>
+
+
+                <div
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
+                    <img src="./assets/opt-3.png" alt="">
+                    <h3 class="text-center text-sm">Transfer Money</h3>
+                </div>
+
+
+                <div
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
+                    <img src="./assets/opt-4.png" alt="">
+                    <h3 class="text-center text-sm">Get Bonus</h3>
+                </div>
+
+
+                <div
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
+                    <img src="./assets/opt-5.png" alt="">
+                    <h3 class="text-center text-sm">Pay Bill</h3>
+                </div>
+
+
+                <div
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
+                    <img src="./assets/opt-6.png" alt="">
+                    <h3 class="text-center text-sm">Transactions</h3>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Adding add money section -->
+
+    <section class="max-w-lg mx-auto my-5 text-[20px]">
+        <h1>Add Money</h1>
     </section>
 
-    <!-- Cards section -->
+    <section class="max-w-lg mx-auto bg-white p-5 rounded-xl">
+        <div class="flex flex-col">
+            <label for="bank-select" class="block my-2">Select Bank</label>
+            <select class="select w-full rounded-xl bg-[#f4f5f7] outline-none" id="bank-select">
+                <option disabled selected>Choose a Bank</option>
+                <option>Islami Bank</option>
+                <option>Dutch-Bangla</option>
+                <option>Standard Charter</option>
+            </select>
 
-<section class="mt-12">
-    <div class="parent grid grid-cols-3 gap-3">
+            <label for="bank-num" class="font-bold block my-2">Bank Account Number</label>
+            <input type="tel" id="bank-num" placeholder="Enter 11 digit account number"
+                class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
 
-        <div
-            class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
-            <img src="./assets/opt-1.png" alt="">
-            <h3 class="text-center text-sm">Add Money</h3>
+            <label for="add-amount" class="font-bold block my-2">Amount to Add</label>
+            <input type="number" inputmode="numeric" id="add-amount" placeholder="Add Amount to withdraw"
+                class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
+
+            <label for="password" class="font-bold block my-2">Pin Number</label>
+            <input type="password" inputmode="numeric" maxlength="4" id="password" placeholder="Enter 4 digit pin number"
+                class="input rounded-xl bg-[#f4f5f7] outline-none w-full" /> <br>
+            <button class="btn bg-[#3B25C1] text-white text-xl font-thin rounded-3xl w-full"
+                id="add-money-btn">Add Money</button>
         </div>
+       
+    </section>
 
-
-        <div
-            class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
-            <img src="./assets/opt-2.png" alt="">
-            <h3 class="text-center text-sm">Cashout</h3>
-        </div>
-
-
-        <div
-            class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
-            <img src="./assets/opt-3.png" alt="">
-            <h3 class="text-center text-sm">Transfer Money</h3>
-        </div>
-
-
-        <div
-            class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
-            <img src="./assets/opt-4.png" alt="">
-            <h3 class="text-center text-sm">Get Bonus</h3>
-        </div>
-
-
-        <div
-            class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
-            <img src="./assets/opt-5.png" alt="">
-            <h3 class="text-center text-sm">Pay Bill</h3>
-        </div>
-
-
-        <div
-            class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
-            <img src="./assets/opt-6.png" alt="">
-            <h3 class="text-center text-sm">Transactions</h3>
-        </div>
-
-    </div>
-</section>
-
-</main>
+<script src="./scripts/home.js"></script>
 </body>
 
 </html>
