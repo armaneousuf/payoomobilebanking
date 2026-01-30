@@ -1,3 +1,4 @@
+// Add Money Logics
 const pinNumber = 1234;
 
 document
@@ -14,18 +15,18 @@ document
     );
 
     if (accountNumber.length < 11) {
-      alert('Please provide a valid Account number');
+      alert("Please provide a valid Account number");
       return;
     }
 
     if (pin !== pinNumber) {
-      alert('Please provide a valid Pin number');
+      alert("Please provide a valid Pin number");
       return;
     }
 
-    if (isNaN(amount) || amount <= 0){
-  alert('Please enter a valid number');
-  return;
+    if (isNaN(amount) || amount <= 0) {
+      alert("Please enter a valid number");
+      return;
     }
 
     const totalNewBalance = amount + totalAmount;
@@ -38,5 +39,21 @@ document
     document.querySelector("#password").value = "";
   });
 
+// Cashout Logics
 
-  
+
+
+
+
+
+
+
+
+document.querySelector("#add-btn").addEventListener("click", function () {
+  document.querySelector("#cashout-parent").style.display = "none";
+  document.querySelector("#add-money-parent").style.display = "block";
+});
+document.querySelector("#cashout-btn").addEventListener("click", function () {
+  document.querySelector("#cashout-parent").style.display = "block";
+  document.querySelector("#add-money-parent").style.display = "none";
+});
