@@ -11,7 +11,7 @@ document
     const amount = parseFloat(document.querySelector("#add-amount").value);
     const pin = parseFloat(document.querySelector("#password").value);
     const totalAmount = parseFloat(
-      document.querySelector("#total-amount").innerText,
+      document.querySelector("#total-amount").innerText
     );
 
     if (accountNumber.length < 11) {
@@ -41,7 +41,43 @@ document
 
 // Cashout Logics
 
+document.querySelector("#cashout-withdraw-btn").addEventListener('click', function (e) {
+  e.preventDefault();
 
+  const agentNum = document.querySelector('#agent-num').value;
+  const cashoutAmount = parseFloat(
+    document.querySelector("#cashout-amount").value,
+  );
+  const cashoutPin = parseFloat(document.querySelector('#cashout-pin').value);
+  const totalAmount = parseFloat(document.querySelector('#total-amount').innerText);
+
+  if (agentNum.length < 11) {
+    alert('Please provide a valid Agent number');
+    return;
+  }
+
+  if (cashoutPin !== pinNumber) {
+    alert('Please provide a valid Pin number');
+    return;
+  }
+
+  if (isNaN(cashoutAmount) || cashoutAmount <= 0) {
+    alert('Please enter a valid number');
+    return;
+  }
+
+  if (cashoutAmount > totalAmount) {
+    alert('Insufficient Balance');
+    return;
+  }
+
+  const newBalance = totalAmount - cashoutAmount;
+  document.querySelector('#total-amount').innerText = newBalance;
+
+  document.querySelector("#cashout-amount").value = "";
+  document.querySelector("#cashout-pin").value = "";
+  document.querySelector("#agent-num").value = "";
+})
 
 
 

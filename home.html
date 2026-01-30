@@ -38,7 +38,7 @@
             </div>
         </nav>
 
-        <section class="mt-10">
+        <div class="mt-10">
             <div>
                 <h1 class="text-[24px] font-semibold">Welcome to Pay<span class="text-[#7460ff]">oo</span></h1>
                 <p class="text-[#808080] mt-3">Enjoy easy and convenient financial services with us. Cashout charge is
@@ -46,7 +46,7 @@
                     and
                 </p>
             </div>
-        </section>
+        </div>
 
         <!-- Cards section -->
 
@@ -68,28 +68,28 @@
 
 
                 <div
-                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]" id="transfer-btn">
                     <img src="./assets/opt-3.png" alt="">
                     <h3 class="text-center text-sm">Transfer Money</h3>
                 </div>
 
 
                 <div
-                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]" id='bonus-btn'>
                     <img src="./assets/opt-4.png" alt="">
                     <h3 class="text-center text-sm">Get Bonus</h3>
                 </div>
 
 
                 <div
-                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]" id="bill-btn">
                     <img src="./assets/opt-5.png" alt="">
                     <h3 class="text-center text-sm">Pay Bill</h3>
                 </div>
 
 
                 <div
-                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]">
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]" id="transactions-btn">
                     <img src="./assets/opt-6.png" alt="">
                     <h3 class="text-center text-sm">Transactions</h3>
                 </div>
@@ -98,7 +98,7 @@
         </section>
     </main>
 
-    <!-- Adding add money section -->
+    <!-- Add money section -->
 
    <section id="add-money-parent">
     <div class="max-w-lg mx-auto my-5 text-[20px]">
@@ -151,8 +151,8 @@
                 <input type="number" inputmode="numeric" id="cashout-amount" placeholder="Enter Amount to withdraw"
                     class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
         
-                <label for="cashout-password" class="font-bold block my-2">Pin Number</label>
-                <input type="password" inputmode="numeric" maxlength="4" id="cashout-password" placeholder="Enter 4 digit pin number"
+                <label for="cashout-pin" class="font-bold block my-2">Pin Number</label>
+                <input type="password" inputmode="numeric" maxlength="4" id="cashout-pin" placeholder="Enter 4 digit pin number"
                     class="input rounded-xl bg-[#f4f5f7] outline-none w-full" /> <br>
                 <button class="btn bg-[#3B25C1] text-white text-xl font-thin rounded-3xl w-full" id="cashout-withdraw-btn">withdraw
                     Money</button>
