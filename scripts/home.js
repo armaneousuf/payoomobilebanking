@@ -84,7 +84,7 @@ document.querySelector("#cashout-withdraw-btn").addEventListener('click', functi
 
 
 
-
+// Toggle buttons
 document.querySelector("#add-btn").addEventListener("click", function () {
   document.querySelector("#cashout-parent").style.display = "none";
   document.querySelector("#add-money-parent").style.display = "block";
