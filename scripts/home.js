@@ -29,6 +29,38 @@ function handleToggle(id) {
   document.querySelector(id).style.display = "block";
 }
 
+function validateAccountNumber(accountNumber) {
+  if (accountNumber.length < 11) {
+    alert('Please provide a valid Account Number');
+    return true;
+  }
+  return false;
+}
+
+function validatePin(inputPin, validPin) {
+  if (inputPin !== validPin) {
+    alert('Please provide a valid Pin Number');
+    return false;
+  }
+  return true;
+}
+
+function validateAmount(amount) {
+  if (isNaN(amount) || amount <= 0) {
+    alert('Please Provide a valid Amount');
+    return false;
+  }
+  return true;
+}
+
+function validateBalance(amount, totalAmount) {
+  if (amount > totalAmount) {
+    alert('Insufficient Balance');
+    return false;
+  }
+  return true;
+}
+
 document
   .querySelector("#add-money-btn")
   .addEventListener("click", function (e) {
@@ -40,20 +72,13 @@ document
     const pin = getInputNumber("#password");
     const totalAmount = getInnerText("#total-amount");
 
-    if (accountNumber.length < 11) {
-      alert("Please provide a valid Account number");
-      return;
-    }
 
-    if (pin !== pinNumber) {
-      alert("Please provide a valid Pin number");
+    if (
+      !validateAccountNumber(accountNumber) ||
+      !validatePin(pin, pinNumber) ||
+      !validateAmount(amount)
+    )
       return;
-    }
-
-    if (isNaN(amount) || amount <= 0) {
-      alert("Please enter a valid number");
-      return;
-    }
 
     const totalNewBalance = amount + totalAmount;
 
@@ -76,25 +101,14 @@ document
     const cashoutPin = getInputNumber("#cashout-pin");
     const totalAmount = getInnerText("#total-amount");
 
-    if (agentNum.length < 11) {
-      alert("Please provide a valid Agent number");
+    if (
+      !validateAccountNumber(agentNum) ||
+      !validatePin(pinNumber, cashoutPin) ||
+      !validateBalance(cashoutAmount) ||
+      !validateAmount(cashoutAmount, totalAmount)
+    )
       return;
-    }
 
-    if (cashoutPin !== pinNumber) {
-      alert("Please provide a valid Pin number");
-      return;
-    }
-
-    if (isNaN(cashoutAmount) || cashoutAmount <= 0) {
-      alert("Please enter a valid number");
-      return;
-    }
-
-    if (cashoutAmount > totalAmount) {
-      alert("Insufficient Balance");
-      return;
-    }
 
     const newBalance = totalAmount - cashoutAmount;
     setInnerText("#total-amount", newBalance);
@@ -115,25 +129,13 @@ document
     const transferPin = getInputNumber("#transfer-pin");
     const totalAmount = getInnerText("#total-amount");
 
-    if (userAccountNumber.length < 11) {
-      alert("Please provide a valid Account Number");
+    if (
+      !validateAccountNumber(userAccountNumber) ||
+      !validatePin(pinNumber, transferPin) ||
+      !validateAmount(transferAmount) ||
+      !validateBalance(transferAmount, totalAmount)
+    )
       return;
-    }
-
-    if (transferPin !== pinNumber) {
-      alert("Please provide a valid Pin Number");
-      return;
-    }
-
-    if (isNaN(transferAmount) || transferAmount <= 0) {
-      alert("Please enter a valid number");
-      return;
-    }
-
-    if (transferAmount > totalAmount) {
-      alert("Insufficient Balance");
-      return;
-    }
 
     const newBalance = totalAmount - transferAmount;
     setInnerText("#total-amount", newBalance);
@@ -151,6 +153,11 @@ document
 
     const bonusCoupon = getInputNumber("#bonus-coupon");
     const totalAmount = getInnerText("#total-amount");
+
+    if (
+      !validateAmount(bonusCoupon)
+    )
+      return;
 
     const newBalance = totalAmount + bonusCoupon;
     setInnerText("#total-amount", newBalance);
