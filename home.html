@@ -125,8 +125,8 @@
     
             <label for="password" class="font-bold block my-2">Pin Number</label>
             <input type="password" inputmode="numeric" maxlength="4" id="password" placeholder="Enter 4 digit pin number"
-                class="input rounded-xl bg-[#f4f5f7] outline-none w-full" /> <br>
-            <button class="btn bg-[#3B25C1] text-white text-xl font-thin rounded-3xl w-full" id="add-money-btn">Add
+                class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
+            <button class="btn bg-[#3B25C1] text-white text-xl font-thin rounded-3xl w-full mt-4" id="add-money-btn">Add
                 Money</button>
         </div>
     
@@ -195,6 +195,17 @@
         <div class="max-w-lg mx-auto my-5 text-[20px]">
             <h1>Get Bonus</h1>
         </div>
+        <section class="max-w-lg mx-auto bg-white p-5 rounded-xl">
+            <div class="flex flex-col">
+             
+                <label for="bonus-coupon" class="font-bold block my-2">Enter Bonus Coupon</label>
+                <input type="text" id="bonus-coupon" placeholder="Enter your coupon"
+                    class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
+                <button class="btn bg-[#3B25C1] text-white text-xl font-thin rounded-3xl w-full mt-4"
+                    id="get-bonus-btn">Get Bonus</button>
+            </div>
+        
+        </section>
     </section>
 
     <!-- Pay Bill -->
@@ -203,6 +214,31 @@
         <div class="max-w-lg mx-auto my-5 text-[20px]">
             <h1>Pay Bill</h1>
         </div>
+        <section class="max-w-lg mx-auto bg-white p-5 rounded-xl">
+            <div class="flex flex-col">
+                <label for="pay-bill-bank-select" class="block my-2">Select to pay</label>
+                <select class="select w-full rounded-xl bg-[#f4f5f7] outline-none" id="pay-bill-bank-select">
+                    <option disabled selected>Choose a Bank</option>
+                    <option>Islami Bank</option>
+                    <option>Dutch-Bangla</option>
+                    <option>Standard Charter</option>
+                </select>
+        
+                <label for="pay-bill-account-number" class="font-bold block my-2">Biller Account Number</label>
+                <input type="tel" id="pay-bill-account-number" placeholder="Enter account number"
+                    class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
+        
+                <label for="pay-bill-amount" class="font-bold block my-2">Amount to pay</label>
+                <input type="number" inputmode="numeric" id="pay-bill-amount" placeholder="Add Amount to pay"
+                    class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
+        
+                <label for="pay-bill-password" class="font-bold block my-2">Pin Number</label>
+                <input type="password" inputmode="numeric" maxlength="4" id="pay-bill-password" placeholder="Enter 4 digit pin number"
+                    class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
+                <button class="btn bg-[#3B25C1] text-white text-xl font-thin rounded-3xl w-full mt-4" id="pay-bill-btn">Pay Now</button>
+            </div>
+        
+        </section>
     </section>
 
     <!-- Transactions -->

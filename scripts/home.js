@@ -105,6 +105,73 @@ document
     document.querySelector("#agent-num").value = "";
   });
 
+// Transfer Money Logics
+  
+document.querySelector('#transfer-send-btn').addEventListener('click', function (e) {
+  e.preventDefault();
+  
+  const userAccountNumber = getInputValue("#user-account-num");
+  const transferAmount = getInputNumber("#transfer-amount");
+  const transferPin = getInputNumber('#transfer-pin');
+  const totalAmount = getInnerText('#total-amount');
+
+  if (userAccountNumber.length < 11) {
+    alert('Please provide a valid Account Number');
+    return;
+  }
+
+  if (transferPin !== pinNumber) {
+    alert('Please provide a valid Pin Number');
+    return;
+  }
+
+  if (isNaN(transferAmount) || transferAmount <= 0) {
+    alert('Please enter a valid number');
+    return;
+  }
+
+  if (transferAmount > totalAmount) {
+    alert('Insufficient Balance')
+    return;
+  }
+
+  const newBalance = totalAmount - transferAmount;
+  setInnerText('#total-amount', newBalance);
+
+  document.querySelector("#transfer-amount").value = "";
+  document.querySelector("#transfer-pin").value = "";
+  document.querySelector("#user-account-num").value = "";
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Toggle buttons
 document.querySelector("#add-btn").addEventListener("click", function () {
   handleToggle("#add-money-parent");
