@@ -32,9 +32,9 @@ function handleToggle(id) {
 function validateAccountNumber(accountNumber) {
   if (accountNumber.length < 11) {
     alert('Please provide a valid Account Number');
-    return true;
+    return false;
   }
-  return false;
+  return true;
 }
 
 function validatePin(inputPin, validPin) {
@@ -75,7 +75,7 @@ document
 
     if (
       !validateAccountNumber(accountNumber) ||
-      !validatePin(pin, pinNumber) ||
+      !validatePin(pinNumber, pin) ||
       !validateAmount(amount)
     )
       return;
@@ -104,8 +104,8 @@ document
     if (
       !validateAccountNumber(agentNum) ||
       !validatePin(pinNumber, cashoutPin) ||
-      !validateBalance(cashoutAmount) ||
-      !validateAmount(cashoutAmount, totalAmount)
+      !validateAmount(cashoutAmount) ||
+      !validateBalance(cashoutAmount, totalAmount)
     )
       return;
 
@@ -131,7 +131,7 @@ document
 
     if (
       !validateAccountNumber(userAccountNumber) ||
-      !validatePin(pinNumber, transferPin) ||
+      !validatePin(transferPin, pinNumber) ||
       !validateAmount(transferAmount) ||
       !validateBalance(transferAmount, totalAmount)
     )
@@ -167,7 +167,30 @@ document
 
 // Pay Bill Logics
 
+document.querySelector('#pay-bill-btn').addEventListener('click', function (e) {
+  e.preventDefault();
 
+  const payBillBank = getInputValue("#pay-bill-bank-select");
+  const payBillBankAccount = getInputValue("#pay-bill-account-number");
+  const payBillAmount = getInputNumber('#pay-bill-amount')
+  const payBillAmountPin = getInputNumber("#pay-bill-pin");
+  const totalAmount = getInnerText('#total-amount')
+
+  if (
+    !validateAccountNumber(payBillBankAccount) ||
+    !validatePin(pinNumber, payBillAmountPin) ||
+    !validateAmount(payBillAmount) ||
+    !validateBalance(payBillAmount, totalAmount)
+  )
+    return;
+  
+  const newBalance = totalAmount - payBillAmount;
+  setInnerText('#total-amount', newBalance);
+
+  document.querySelector("#pay-bill-amount").value = "";
+  document.querySelector("#pay-bill-pin").value = "";
+  document.querySelector("#pay-bill-account-number").value = "";
+})
 
 
 
