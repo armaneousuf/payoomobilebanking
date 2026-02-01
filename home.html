@@ -100,7 +100,7 @@
 
     <!-- Add money section -->
 
-   <section id="add-money-parent">
+   <section id="add-money-parent" class="form hidden">
     <div class="max-w-lg mx-auto my-5 text-[20px]">
         <h1>Add Money</h1>
     </div>
@@ -135,7 +135,7 @@
 
     <!-- Cashout section  -->
 
-    <section id="cashout-parent" class="hidden">
+    <section id="cashout-parent" class="form hidden">
         <div class="max-w-lg mx-auto my-5 text-[20px]">
             <h1>Cashout</h1>
         </div>
@@ -153,15 +153,65 @@
         
                 <label for="cashout-pin" class="font-bold block my-2">Pin Number</label>
                 <input type="password" inputmode="numeric" maxlength="4" id="cashout-pin" placeholder="Enter 4 digit pin number"
-                    class="input rounded-xl bg-[#f4f5f7] outline-none w-full" /> <br>
-                <button class="btn bg-[#3B25C1] text-white text-xl font-thin rounded-3xl w-full" id="cashout-withdraw-btn">withdraw
+                    class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
+                <button class="btn bg-[#3B25C1] text-white text-xl font-thin rounded-3xl w-full mt-4" id="cashout-withdraw-btn">withdraw
                     Money</button>
             </div>
         
         </section>
     </section>
-    
 
+    <!-- Transfer Money -->
+    
+    <section id="transfer-parent" class="form hidden">
+        <div class="max-w-lg mx-auto my-5 text-[20px]">
+            <h1>Transfer Money</h1>
+        </div>
+
+        <section class="max-w-lg mx-auto bg-white p-5 rounded-xl">
+            <div class="flex flex-col">
+        
+                <label for="user-account-num" class="font-bold block my-2">User Account Number</label>
+                <input type="tel" id="user-account-num" placeholder="Enter 11 digit number"
+                    class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
+        
+                <label for="transfer-amount" class="font-bold block my-2">Amount</label>
+                <input type="number" inputmode="numeric" id="transfer-amount" placeholder="Enter Amount to transfer"
+                    class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
+        
+                <label for="transfer-pin" class="font-bold block my-2">Pin Number</label>
+                <input type="password" inputmode="numeric" maxlength="4" id="transfer-pin" placeholder="Enter 4 digit pin number"
+                    class="input rounded-xl bg-[#f4f5f7] outline-none w-full" />
+                <button class="btn bg-[#3B25C1] text-white text-xl font-thin rounded-3xl w-full mt-4"
+                    id="transfer-send-btn">Send Now</button>
+            </div>
+        
+        </section>
+    </section>
+
+    <!-- Get Bonus -->
+
+    <section id="get-bonus-parent" class="form hidden">
+        <div class="max-w-lg mx-auto my-5 text-[20px]">
+            <h1>Get Bonus</h1>
+        </div>
+    </section>
+
+    <!-- Pay Bill -->
+
+    <section id="pay-bill-parent" class="form hidden">
+        <div class="max-w-lg mx-auto my-5 text-[20px]">
+            <h1>Pay Bill</h1>
+        </div>
+    </section>
+
+    <!-- Transactions -->
+
+    <section id="transaction-parent" class="form hidden">
+        <div class="max-w-lg mx-auto my-5 text-[20px]">
+            <h1>Transactions</h1>
+        </div>
+    </section>
 <script src="./scripts/home.js"></script>
 </body>
 
