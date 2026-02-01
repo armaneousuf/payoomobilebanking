@@ -1,15 +1,26 @@
 // Add Money Logics
 const pinNumber = 1234;
 
+
+// Reusable function
+
+function getInputValue(id) {
+  return document.querySelector(id).value;
+}
+
+function getInputNumber(id) {
+  return parseFloat(document.querySelector(id).value);
+}
+
 document
   .querySelector("#add-money-btn")
   .addEventListener("click", function (e) {
     e.preventDefault();
 
-    const bank = document.querySelector("#bank-select").value;
-    const accountNumber = document.querySelector("#bank-num").value;
-    const amount = parseFloat(document.querySelector("#add-amount").value);
-    const pin = parseFloat(document.querySelector("#password").value);
+    const bank = getInputValue("#bank-select");
+    const accountNumber = getInputValue("#bank-num");
+    const amount = getInputNumber('#add-amount');
+    const pin = getInputNumber("#password");
     const totalAmount = parseFloat(
       document.querySelector("#total-amount").innerText
     );
@@ -37,6 +48,7 @@ document
     document.querySelector("#add-amount").value = "";
     document.querySelector("#bank-num").value = "";
     document.querySelector("#password").value = "";
+
   });
 
 // Cashout Logics
@@ -44,11 +56,9 @@ document
 document.querySelector("#cashout-withdraw-btn").addEventListener('click', function (e) {
   e.preventDefault();
 
-  const agentNum = document.querySelector('#agent-num').value;
-  const cashoutAmount = parseFloat(
-    document.querySelector("#cashout-amount").value,
-  );
-  const cashoutPin = parseFloat(document.querySelector('#cashout-pin').value);
+  const agentNum = getInputValue('#agent-num');
+  const cashoutAmount = getInputNumber("#cashout-amount")
+  const cashoutPin = getInputNumber("#cashout-pin");
   const totalAmount = parseFloat(document.querySelector('#total-amount').innerText);
 
   if (agentNum.length < 11) {
