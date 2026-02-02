@@ -250,6 +250,33 @@ document.querySelector('#pay-bill-btn').addEventListener('click', function (e) {
 })
 
 
+document.querySelector('#transactions-btn').addEventListener('click', function () {
+  const transactionContainer = document.querySelector("#transaction-container");
+  transactionContainer.innerHTML = '';
+
+  for (const data of transactionData) {
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <div class="flex justify-between items-center p-3 hover:bg-gray-50 cursor-pointer">
+                <div class="flex gap-3">
+                    <img src="./assets/transaction.svg" alt="" class="bg-[#f4f5f7] w-10 h-10 rounded-xl p-2">
+                    <div>
+                        <h3 class="text-sm font-medium">${data.name}</h3>
+                        <p class="text-xs text-gray-500">${data.data}</p>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
+                    <title xmlns="">dots-three-vertical</title>
+                    <path fill="currentColor"
+                        d="M140 128a12 12 0 1 1-12-12a12 12 0 0 1 12 12m-12-56a12 12 0 1 0-12-12a12 12 0 0 0 12 12m0 112a12 12 0 1 0 12 12a12 12 0 0 0-12-12" />
+                </svg>
+            </div>
+    `;
+    transactionContainer.appendChild(div);
+  }
+})
+
+
 // Toggle buttons
 document.querySelector("#add-btn").addEventListener("click", function () {
   handleToggle("#add-money-parent");
