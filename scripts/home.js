@@ -262,7 +262,7 @@ document.querySelector('#transactions-btn').addEventListener('click', function (
                     <img src="./assets/transaction.svg" alt="" class="bg-[#f4f5f7] w-10 h-10 rounded-xl p-2">
                     <div>
                         <h3 class="text-sm font-medium">${data.name}</h3>
-                        <p class="text-xs text-gray-500">${data.data}</p>
+                        <p class="text-xs text-gray-500">${data.date}</p>
                     </div>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
