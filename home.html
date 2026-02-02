@@ -15,7 +15,7 @@
     <title>Payoo Homepage</title>
 </head>
 
-<body class="bg-[#F4F5F7] min-h-screen font-[Inter] pt-5 selection:bg-[#7480ff] selection:text-black">
+<body class="bg-[#F4F5F7] min-h-screen font-[Inter] pt-5 selection:bg-[#7480ff] selection:text-white">
 
     <main class="max-w-lg mx-auto bg-white p-5 rounded-b-xl">
         <nav class="min-h-[50px] p-2 mt-2 flex justify-between items-center border-b-2 border-b-[#cec7c780]">
@@ -54,42 +54,42 @@
             <div class="parent grid grid-cols-3 gap-3">
 
                 <div
-                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]" id="add-btn">
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7] form-btn" id="add-btn">
                     <img src="./assets/opt-1.png" alt="">
                     <h3 class="text-center text-sm">Add Money</h3>
                 </div>
 
 
                 <div
-                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]" id="cashout-btn">
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7] form-btn" id="cashout-btn">
                     <img src="./assets/opt-2.png" alt="">
                     <h3 class="text-center text-sm">Cashout</h3>
                 </div>
 
 
                 <div
-                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]" id="transfer-btn">
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7] form-btn" id="transfer-btn">
                     <img src="./assets/opt-3.png" alt="">
                     <h3 class="text-center text-sm">Transfer Money</h3>
                 </div>
 
 
                 <div
-                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]" id='bonus-btn'>
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7] form-btn" id='bonus-btn'>
                     <img src="./assets/opt-4.png" alt="">
                     <h3 class="text-center text-sm">Get Bonus</h3>
                 </div>
 
 
                 <div
-                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]" id="bill-btn">
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7] form-btn" id="bill-btn">
                     <img src="./assets/opt-5.png" alt="">
                     <h3 class="text-center text-sm">Pay Bill</h3>
                 </div>
 
 
                 <div
-                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7]" id="transactions-btn">
+                    class="bg-white p-5 rounded-xl hover:bg-[#f4f5f7] cursor-pointer transition duration-300 flex flex-col items-center gap-3 border-2 border-[#f4f5f7] form-btn" id="transactions-btn">
                     <img src="./assets/opt-6.png" alt="">
                     <h3 class="text-center text-sm">Transactions</h3>
                 </div>
@@ -243,9 +243,27 @@
 
     <!-- Transactions -->
 
-    <section id="transaction-parent" class="form hidden">
-        <div class="max-w-lg mx-auto my-5 text-[20px]">
+    <section id="transaction-parent" class="form max-w-lg mx-auto hidden">
+        <div class="max-w-lg mx-auto my-5 text-[20px] flex justify-between items-center">
             <h1>Transactions</h1>
+            <p class="text-[#08080880] text-sm cursor-pointer">View all</p>
+        </div>
+
+        <div class="bg-white rounded">
+            <div class="flex justify-between items-center p-3 hover:bg-gray-50 cursor-pointer">
+                <div class="flex gap-3">
+                    <img src="./assets/transaction.svg" alt="" class="bg-[#f4f5f7] w-10 h-10 rounded-xl p-2">
+                    <div>
+                        <h3 class="text-sm font-medium">Electricity Bill</h3>
+                        <p class="text-xs text-gray-500">Today 01:44 AM</p>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
+                    <title xmlns="">dots-three-vertical</title>
+                    <path fill="currentColor"
+                        d="M140 128a12 12 0 1 1-12-12a12 12 0 0 1 12 12m-12-56a12 12 0 1 0-12-12a12 12 0 0 0 12 12m0 112a12 12 0 1 0 12 12a12 12 0 0 0-12-12" />
+                </svg>
+            </div>
         </div>
     </section>
 <script src="./scripts/home.js"></script>

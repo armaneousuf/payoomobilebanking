@@ -1,5 +1,6 @@
 // Add Money Logics
 const pinNumber = 1234;
+const transactionData = [];
 
 // Reusable function
 
@@ -61,6 +62,22 @@ function validateBalance(amount, totalAmount) {
   return true;
 }
 
+// Toggling reusable logics
+
+function handleButtonToggle(id) {
+  const toggleBtns = document.querySelectorAll('.form-btn');
+
+  for (const btn of toggleBtns) {
+    btn.classList.remove('border-blue-500', 'bg-blue-100');
+    btn.classList.add('border-gray-300');
+  }
+
+  document.querySelector(id).classList.remove('border-gray-300');
+  document
+    .querySelector(id)
+    .classList.add("border-blue-500", "bg-blue-100");
+}
+
 document
   .querySelector("#add-money-btn")
   .addEventListener("click", function (e) {
@@ -83,6 +100,14 @@ document
     const totalNewBalance = amount + totalAmount;
 
     setInnerText("#total-amount", totalNewBalance);
+
+    const data = {
+      name: 'Add Money',
+      date: new Date().toLocaleTimeString()
+    };
+
+    transactionData.push(data);
+    console.log(transactionData);
 
     // This clears the physical input box on the screen
     document.querySelector("#add-amount").value = "";
@@ -113,6 +138,14 @@ document
     const newBalance = totalAmount - cashoutAmount;
     setInnerText("#total-amount", newBalance);
 
+    const data = {
+      name: "Cashout",
+      date: new Date().toLocaleTimeString(),
+    };
+
+    transactionData.push(data);
+    console.log(transactionData);
+
     document.querySelector("#cashout-amount").value = "";
     document.querySelector("#cashout-pin").value = "";
     document.querySelector("#agent-num").value = "";
@@ -140,6 +173,14 @@ document
     const newBalance = totalAmount - transferAmount;
     setInnerText("#total-amount", newBalance);
 
+    const data = {
+      name: "Transfer Money",
+      date: new Date().toLocaleTimeString(),
+    };
+
+    transactionData.push(data);
+    console.log(transactionData);
+
     document.querySelector("#transfer-amount").value = "";
     document.querySelector("#transfer-pin").value = "";
     document.querySelector("#user-account-num").value = "";
@@ -161,6 +202,14 @@ document
 
     const newBalance = totalAmount + bonusCoupon;
     setInnerText("#total-amount", newBalance);
+
+    const data = {
+      name: "Bonus Coupon",
+      date: new Date().toLocaleTimeString(),
+    };
+
+    transactionData.push(data);
+    console.log(transactionData);
 
     document.querySelector("#bonus-coupon").value = "";
   });
@@ -187,48 +236,49 @@ document.querySelector('#pay-bill-btn').addEventListener('click', function (e) {
   const newBalance = totalAmount - payBillAmount;
   setInnerText('#total-amount', newBalance);
 
+  const data = {
+    name: "Pay Bill",
+    date: new Date().toLocaleTimeString(),
+  };
+
+  transactionData.push(data);
+  console.log(transactionData);
+
   document.querySelector("#pay-bill-amount").value = "";
   document.querySelector("#pay-bill-pin").value = "";
   document.querySelector("#pay-bill-account-number").value = "";
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Toggle buttons
 document.querySelector("#add-btn").addEventListener("click", function () {
   handleToggle("#add-money-parent");
+  handleButtonToggle('#add-btn')
 });
 
 document.querySelector("#cashout-btn").addEventListener("click", function () {
   handleToggle("#cashout-parent");
+  handleButtonToggle('#cashout-btn')
 });
 
 document.querySelector("#transfer-btn").addEventListener("click", function () {
   handleToggle("#transfer-parent");
+  handleButtonToggle('#transfer-btn')
 });
 
 document.querySelector("#bonus-btn").addEventListener("click", function () {
   handleToggle("#get-bonus-parent");
+  handleButtonToggle('#bonus-btn')
 });
 
 document.querySelector("#bill-btn").addEventListener("click", function () {
   handleToggle("#pay-bill-parent");
+  handleButtonToggle('#bill-btn')
 });
 
 document
   .querySelector("#transactions-btn")
   .addEventListener("click", function () {
     handleToggle("#transaction-parent");
+    handleButtonToggle('#transactions-btn')
   });
